@@ -1,0 +1,19 @@
+
+.btn{
+	text-decoration: none;
+	/*first value is top and bottom, second is left and right*/
+	padding: .75rem 1.2rem;
+	display: inline-block;
+	background-color: $mainBlue;
+	color: #FFF;
+
+	&--orange{
+		background-color: $mainOrange;
+	}
+
+	&--large{
+		font-size: 1.25rem;
+		padding: 1.1rem 1.9rem;
+
+	}
+}
