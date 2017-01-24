@@ -1,7 +1,15 @@
 .large-hero {
+	border-bottom: 10px solid $mainBlue;
 	position: relative;
 	/*& relays the parent .large-hero so &__text-content turns into .large-hero__text-content
 	in our temp folder in order to keep BEM philosophies in our filtered temp css file.*/
+
+	&__image{
+		/*block gets rid of the line meant for bottom part of letters that inline gives.*/
+		display: block;
+	}
+
+
 	&__text-content {
 	position: absolute;
 	top: 50%;
@@ -14,7 +22,7 @@
 
 	&__title {
 	color: $mainBlue;
-	font-size: 1.1rem;
+	font-size: 2.4rem;
 	font-weight: 300;
 	margin: 0;
 
@@ -25,7 +33,7 @@
 
 	&__subtitle{
 	color: $mainBlue;
-	font-size: 1.1rem;
+	font-size: 1.5rem;
 	font-weight: 300;
 	margin: 0;
 
@@ -37,11 +45,15 @@
 /*get rem values based off the fact most browsers have default font size of 16*/
 	&__description{
 		color: #fff;
-		font-size: 1.875rem;
+		font-size: 1.1rem;
 		font-weight: 100;
 		text-shadow: 2px 2px 0 rgba(0,0,0,.1);
 		max-width: 30rem;
 		margin: 0 auto;
+
+		@mixin atSmall{
+			font-size: 1.875rem;
+		}
 	}
 }
 

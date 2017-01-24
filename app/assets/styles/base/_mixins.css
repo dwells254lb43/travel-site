@@ -3,3 +3,24 @@
 		@mixin-content;
 	}
 }
+
+@define-mixin atMedium {
+	@media (min-width: 800px) {
+		@mixin-content;
+	}
+}
+
+@define-mixin atLarge {
+	@media (min-width: 1200px) {
+		@mixin-content;
+	}
+}
+
+/*creates an empty div at the end of a row giving it blank text so floated values do not float out of layout*/
+@define-mixin clearfix{
+	&::after{
+	content: "";
+	clear:both;
+	display: table;
+}
+}

@@ -6,5 +6,17 @@ body{
 img{
 	max-width: 100%;
 	height: auto;
+	
+}
+
+/*The width and height properties (and min/max properties) 
+includes content, padding and border, but not the margin*/
+*{
+	box-sizing: border-box;
+
+}
+
+a{
+	color: $mainOrange;
 }
 

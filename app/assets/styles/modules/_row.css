@@ -1,0 +1,47 @@
+.row{
+	/*clearfix is a fix to floating left and having 0 items in a div, messing up the layout.*/
+	@mixin clearfix;
+	
+/*On medium screens float the values left and create column layouts, on small screens this does not happen
+so the two items just stack on top of eachother.*/
+
+&__b-margin-until-medium{
+	margin-bottom: 1rem;
+}
+	@mixin atMedium{
+
+		&__b-margin-until-medium{
+			margin-bottom: 0rem;
+		}
+		&__medium-4{
+			float: left;
+			width: 33.33%;
+		}
+
+		&__medium-4--larger{
+			width: 37%;
+		}
+
+		&__medium-8{
+			float: left;
+			width: 66.66%;
+		}
+
+		&__medium-8--smaller{
+			width: 63%;
+		}
+	}
+	
+	/*gutters gets rid of the excess right margin on the last most column, so that it is in line with the layout*/
+	&--gutters{
+		margin-right: -65px;
+	}
+	/*creates a 65 px seperation between items in a column layout*/
+	&--gutters > div{
+
+		padding-right: 65px;
+			
+	}
+
+	
+}
