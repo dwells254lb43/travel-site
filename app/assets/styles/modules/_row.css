@@ -27,11 +27,22 @@ so the two items just stack on top of eachother.*/
 			width: 66.66%;
 		}
 
+		&__medium-6{
+			float: left;
+			width: 50%;
+		}
+
 		&__medium-8--smaller{
 			width: 63%;
 		}
 	}
-	
+	&--gutters-large{
+		margin-right: -100px;
+	}
+
+	&--gutters-large > div{
+		padding-right: 100px;
+	}
 	/*gutters gets rid of the excess right margin on the last most column, so that it is in line with the layout*/
 	&--gutters{
 		margin-right: -65px;
